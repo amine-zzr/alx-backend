@@ -61,8 +61,8 @@ class Server:
             List[List]: A list of rows for the specified page, or an empty list
             if the page or page_size is out of range.
         """
-        assert isinstance(page, int) and page > 0,
-        assert isinstance(page_size, int) and page_size > 0,
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
